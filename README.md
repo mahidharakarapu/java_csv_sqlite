@@ -9,23 +9,23 @@ Navigate to the [src/javacsv](./src/javacsv/) folder. The source file s will be 
 	- Main.java - the source code
 	
 ### Compiling for immediate test.
-	```bash
-	
-	$ javac -d ../../dist/ -classpath ".:../../lib/sqlite-jdbc-3.23.1.jar" Main.java
-	$ java Main
-	
-	```
+```bash
+
+$ javac -d ../../dist/ -classpath ".:../../lib/sqlite-jdbc-3.23.1.jar" Main.java
+$ java Main
+
+```
 	
 ### Compiling to Java Executable (jar).
-	```bash
-	
-	$ cd ./src/javacsv
-	$ mkdir "../../dist/" && mkdir "../../dist/lib/" && mkdir "../../dist/META-INF/"
-	$ javac -d ../../dist/ *.java
-	$ cd ../../dist/
-	$ cp ../lib/sqlite-jdbc-3.23.1.jar ./lib/
-	$ echo Main-Class: javacsv.Main > ./META-INF/MANIFEST.MF
-	$ jar cmvf META-INF/MANIFEST.MF java_csv_sqlite.jar javacsv/*.class
-	$ rm -R "./javacsv" && rm -R "./META-INF"
-	
-	```
+```bash
+
+$ cd ./src/javacsv
+$ mkdir "../../dist/" && mkdir "../../dist/lib/" && mkdir "../../dist/META-INF/"
+$ javac -d ../../dist/ *.java
+$ cd ../../dist/
+$ cp ../lib/sqlite-jdbc-3.23.1.jar ./lib/
+$ echo Main-Class: javacsv.Main > ./META-INF/MANIFEST.MF
+$ jar cmvf META-INF/MANIFEST.MF java_csv_sqlite.jar javacsv/*.class
+$ rm -R "./javacsv" && rm -R "./META-INF"
+
+```
