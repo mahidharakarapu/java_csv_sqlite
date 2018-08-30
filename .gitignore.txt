@@ -1,0 +1,3 @@
+#this file to indicate file not to be push to github
+*.class
+/dist/
